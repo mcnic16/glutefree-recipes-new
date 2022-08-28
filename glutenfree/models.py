@@ -43,7 +43,7 @@ class Dessert(db.Model):
 
 
 class Drink(db.Model):
-    # For Starters
+    # For Drinks
     id = db.Column(db.Integer, primary_key=True)
     drink_names = db.Column(db.Text, unique=True, nullable=False)
     drink_tools = db.Column(db.Text, unique=True, nullable=False)
