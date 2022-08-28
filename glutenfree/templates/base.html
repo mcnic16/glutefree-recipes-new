@@ -4,11 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Gluten Free Recipes</title>
 </head>
 <body>
 
-   Testing
+    <header>
+        <nav class="blue" style="padding:0px 10px;">
+            <div class="nav-wrapper ">
+                <a href="#" class="brand-logo text-align: center">GlutenFree Recipes</a>
+    
+                <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                    <i class="material-icons">menu</i>
+                </a>
+    
+                <ul class="right hide-on-med-and-down ">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="">Starters</a></li>
+                    <li><a href="">Mains</a></li>
+                    <li><a href="">Desserts</a></li>
+                    <li><a href="">Drinks</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="">Starters</a></li>
+                    <li><a href="">Mains</a></li>
+                    <li><a href="">Desserts</a></li>
+                    <li><a href="">Drinks</a></li>
+        </ul>
+    </header>
+    
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    
+    </main>
+    
 
+
+
+   <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
