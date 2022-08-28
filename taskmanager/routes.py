@@ -1,6 +1,6 @@
 from flask import render_template
-from glutenfree import app, db
-from glutenfree import Category, Task
+from taskmanager import app, db
+from taskmanager.models import Category, Task
 
 
 @app.route("/")
