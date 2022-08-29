@@ -9,3 +9,7 @@ $(document).ready(function(){
  // collapsible initializataion
  let collapsibles = document.querySelectorAll(".collapsible");
  M.Collapsible.init(collapsibles);
+
+ $(document).ready(function() {
+    $('input#input_text, textarea#textarea2').characterCounter();
+  });
