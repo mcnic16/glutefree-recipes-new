@@ -8,9 +8,3 @@ main {
     flex: 1 0 auto;
 }
 
-@media screen and (max-width: 1075px) {
-
-    .title {
-        font-size: 10px;
-    }
-}
