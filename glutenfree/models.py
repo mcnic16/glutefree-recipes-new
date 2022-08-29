@@ -1,5 +1,6 @@
 from glutenfree import db
 
+
 class Starter(db.Model):
     # For Starters
     id = db.Column(db.Integer, primary_key=True)
