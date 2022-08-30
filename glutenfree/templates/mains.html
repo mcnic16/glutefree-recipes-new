@@ -1,6 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1> here</h1>
+<!-- Modal Trigger -->
+<div class="row">
+    {% for main in mains %}
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal-{{ loop.index }}">{{ main.main_names }}</a>
+    <!-- Modal Structure -->
+     <div id="modal-{{ loop.index }}" class="modal">
+      <div class="modal-content">
+        <h3>{{ main.main_names }}</h3>
+        <h5>Tools:</h5>
+        <p>{{ main.main_tools }}</p>
+        <h5>Ingredients:</h5>
+        <p>{{ main.main_ingredients }}</p>
+        <h5>Directions:</h5>
+        <p>{{ main.main_directions }}/p>
+      
+        <div class="modal-footer">
+          <a href="" class="modal-close waves-effect waves-green btn-flat">Edit</a>
+          <a href="" class="modal-close waves-effect waves-green btn-flat">Delete</a>
+        </div>
+          
+      </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 
 {% endblock %}
