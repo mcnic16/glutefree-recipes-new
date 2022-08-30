@@ -37,7 +37,7 @@ def add_starters():
         db.session.add(starter)
         db.session.commit()
         return redirect(url_for("starters"))
-    return render_template("add_starters.html" )
+    return render_template("add_starters.html")
 
 
 
