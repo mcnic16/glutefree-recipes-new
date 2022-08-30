@@ -6,28 +6,35 @@
       <div class="row">
         <!-- Starters Name -->
         <div class="input-field col s6">
-            <input id="starter_names" name="starter_names" value="{{ starter.starter_name }}" type="text" class="validate" required >
+            <input id="starter_names" name="starter_names" type="text" class="validate" required >
+            {{- starter.starter_name -}}
           <label for="starter_names">Name</label>
         </div>
       </div>
       <!-- Starters Tools -->
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="starter_tools" name="starter_tools" type="text" class="materialize-textarea" class="validate" required ></textarea>
+          <textarea id="starter_tools" name="starter_tools"type="text" class="materialize-textarea" class="validate" required >
+            {{ starter.starter_tools }}
+          </textarea>
           <label for="starter_tools">Tools Required</label>
         </div>
       </div>
       <!-- Ingredients -->
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="starter_ingredients" name="starter_ingredients" type="text" class="materialize-textarea" class="validate" required ></textarea>
+          <textarea id="starter_ingredients" name="starter_ingredients" type="text" class="materialize-textarea" class="validate" required >
+            {{ starter.starter_ingredients }}
+          </textarea>
           <label for="starter_ingredients">Ingredients</label>
         </div>
       </div>
       <!-- Directions -->
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="starter_directions" name="starter_directions" type="text" class="materialize-textarea" class="validate" required ></textarea>
+          <textarea id="starter_directions" name="starter_directions" type="text" class="materialize-textarea" class="validate" required >
+            {{ starter.starter_directions }}
+          </textarea>
           <label for="starter_directions">Directions</label>
         </div>
       </div>

@@ -51,3 +51,10 @@ def edit_starters(starter_id):
         db.session.commit()
     return render_template("edit_starters.html", starter=starter)
 
+
+@app.route("/delete_starters/<int:starter_id>")
+def delete_starters(starter_id):
+    starter = Starter.query.get_or_404(starter_id)
+    db.session.delete(starter)
+    db.session.commit()
+    return redirect(url_for("starters"))
