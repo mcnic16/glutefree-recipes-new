@@ -41,7 +41,9 @@ def add_starters():
 
 
 
-
+@app.route("/edit_starters <int:starter_id>", methods=["GET", "POST"])
+def edit_starters():
+    return render_template("edit_starters.html")
 
 
 

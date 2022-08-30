@@ -2,14 +2,28 @@
 {% block content %}
 
 
- <!-- Element Showed -->
- <a id="menu" class="waves-effect waves-light btn btn-floating" ><i class="material-icons">menu</i></a>
-
- <!-- Tap Target Structure -->
- <div class="tap-target" data-target="menu">
-   <div class="tap-target-content">
-     <h5>Title</h5>
-     <p>A bunch of text</p>
-   </div>
- </div>
+  <!-- Modal Trigger -->
+  <div class="row">
+  {% for starter in starters %}
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal-{{ loop.index }}">{{ starter.starter_names }}</a>
+  <!-- Modal Structure -->
+   <div id="modal-{{ loop.index }}" class="modal">
+    <div class="modal-content">
+      <h3>{{ starter.starter_names }}</h3>
+      <h5>Tools:</h5>
+      <p>{{ starter.starter_tools }}</p>
+      <h5>Ingredients:</h5>
+      <p>{{ starter.starter_ingredients }}</p>
+      <h5>Directions:</h5>
+      <p>{{ starter.starter_directions }}</p>
+    
+      <div class="modal-footer">
+        <a href="{{ url_for('edit_starters') }}, starter_id=starter.id)" class="modal-close waves-effect waves-green btn-flat">Edit</a>
+      </div>
+        
+    </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}
