@@ -62,14 +62,14 @@ def delete_starters(starter_id):
 
 @app.route("/mains")
 def mains():
-    starters = list(Main.query.order_by(Main.id).all())
+    mains= list(Main.query.order_by(Main.id).all())
     return render_template("mains.html", mains=mains)
 
 
 @app.route("/add_mains",  methods=["GET", "POST"])
 def add_mains():
     if request.method == "POST":
-        starter = Main(
+        main = Main(
             main_names=request.form.get("main_names"),
             main_tools=request.form.get("main_tools"),
             main_ingredients=request.form.get("main_ingredients"),
@@ -77,5 +77,5 @@ def add_mains():
         )
         db.session.add(main)
         db.session.commit()
-        return redirect(url_for("main"))
+        return redirect(url_for("mains"))
     return render_template("add_mains.html")
