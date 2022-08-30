@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-
 <div class="row">
    <div class="col s12 m6 l3  ">
     <a href="{{ url_for('add_starters') }}" class="btn-large blue">
@@ -23,7 +22,10 @@
                     Add Drinks <i class="fas fa-plus-square right"></i> </a>
             </div>
 </div>
-
+<img src="{{ url_for('static', filename='img/gluten-free-diet.jpg') }}" align="center" />
+<div class="row">
+        
+</div>
 
 
 {% endblock %}

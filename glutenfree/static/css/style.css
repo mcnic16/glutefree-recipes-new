@@ -13,4 +13,16 @@ main {
     
 }
 
+.gluten-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.gluten-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
 
