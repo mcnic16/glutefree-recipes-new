@@ -40,10 +40,14 @@ def add_starters():
     return render_template("add_starters.html")
 
 
-
-@app.route("/edit_starters <int:starter_id>", methods=["GET", "POST"])
-def edit_starters():
-    return render_template("edit_starters.html")
-
-
+@app.route("/edit_starters/<int:starter_id>",  methods=["GET", "POST"])
+def edit_starters(starter_id):
+    starter = Starter.query.get_or_404(starter_id)
+    if request.method == "POST":
+        starter.starter_names = request.form.get("starter_names"),
+        starter.starter_tools = request.form.get("starter_tools"),
+        starter.starter_ingredients = request.form.get("starter_ingredients"),
+        starter.starter_directions = request.form.get("starter_directions")
+        db.session.commit()
+    return render_template("edit_starters.html", starter=starter)
 

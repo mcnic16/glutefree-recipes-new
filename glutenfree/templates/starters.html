@@ -18,7 +18,7 @@
       <p>{{ starter.starter_directions }}</p>
     
       <div class="modal-footer">
-        <a href="{{ url_for('edit_starters') }}, starter_id=starter.id)" class="modal-close waves-effect waves-green btn-flat">Edit</a>
+        <a href="{{ url_for('edit_starters', starter_id=starter.id) }}" class="modal-close waves-effect waves-green btn-flat">Edit</a>
       </div>
         
     </div>
