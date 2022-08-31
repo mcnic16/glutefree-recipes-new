@@ -8,11 +8,12 @@ main {
     flex: 1 0 auto;
 }
 
+/*---------------------------------------Title in Nabar-----------------*/
 .title {
     font-size: 30px;
-    
 }
 
+/*---------------------------------------Centering content in navar-----------------*/
 .gluten-nav {
     display: flex;
     justify-content: center;
@@ -25,4 +26,11 @@ main {
 }
 
 
+/*---------------------------------------media-queiries-----------------*/
 
+@media screen and (max-width: 1075px) {
+
+    .title {
+        font-size: 20px;
+    }
+}

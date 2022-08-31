@@ -15,34 +15,25 @@
 </head>
 
 <body>
-        <header>
-            <nav class="blue" style="padding:0px 10px;">
-                <div class="nav-wrapper gluten-nav">
-                    <a href="#" class="text-align:center title">GlutenFree Recipes</a>
-    
-                    <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-                        <i class="material-icons">menu</i>
-                    </a>
-    
-                    <ul class="gluten-list hide-on-med-and-down ">
-                        <li><a href="{{ url_for('home') }}">Home</a></li>
-                        <li><a href="{{ url_for('starters') }}">Starters</a></li>
-                        <li><a href="{{ url_for('mains') }}">Mains</a></li>
-                        <li><a href="">Desserts</a></li>
-                        <li><a href="">Drinks</a></li>
-                    </ul>
-                </div>
-            </nav>
-    
-    
-            <ul class="sidenav" id="mobile-nav">
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('starters') }}">Starters</a></li>
-                <li><a href="{{ url_for('mains') }}">Mains</a></li>
-                <li><a href="">Desserts</a></li>
-                <li><a href="">Drinks</a></li>
-            </ul>
-        </header>
+    <nav>
+    <div class="blue gluten-nav nav-wrapper">
+      <a href="#!" class="title">Gluten Free Recipe</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="gluten-list right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul>
     
         <main class="container">
             {% block content %}
