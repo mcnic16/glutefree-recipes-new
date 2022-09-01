@@ -122,3 +122,18 @@ def add_desserts():
         db.session.commit()
         return redirect(url_for("desserts"))
     return render_template("add_desserts.html")
+
+
+@app.route("/edit_desserts/<int:dessert_id>",  methods=["GET", "POST"])
+def edit_desserts(dessert_id):
+    dessert = Dessert.query.get_or_404(dessert_id)
+    if request.method == "POST":
+        dessert.dessert_names = request.form.get("dessert_names"),
+        dessert.dessert_tools = request.form.get("dessert_tools"),
+        dessert.dessert_ingredients = request.form.get("dessert_ingredients"),
+        dessert.dessert_directions = request.form.get("dessert_directions")
+        db.session.commit()
+        return redirect(url_for("desserts"))
+    return render_template("edit_desserts.html", dessert=dessert)
+
+

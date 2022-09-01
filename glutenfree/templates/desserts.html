@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h5> Click on the name of the recipe for full details.</h5>
+<h4 class="card-center">Desserts</h4>
+<h5 class="card-center"> Click on the name of the recipe for full details.</h5>
   <!-- Modal Trigger -->
   <div class="row">
   {% for dessert in desserts %}
@@ -19,7 +20,7 @@
       <p>{{ dessert.dessert_directions }}</p>
     
       <div class="modal-footer">
-        <a href="" class="modal-close waves-effect waves-green btn-flat">Edit</a>
+        <a href="{{ url_for('edit_desserts', dessert_id=dessert.id) }}" class="modal-close waves-effect waves-green btn-flat">Edit</a>
         <a href="" class="modal-close waves-effect waves-green btn-flat">Delete</a>
       </div>
         
