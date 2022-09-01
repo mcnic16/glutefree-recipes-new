@@ -1,36 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h5 class="card-center">Add Main Course</h5>
+<h5 class="card-center">Add Desserts</h5>
 <div class="row card-panel grey lighten-5">
 <div class="row">
-  <form class="col s12" method="POST" action="{{ url_for('add_mains') }}">
+  <form class="col s12" method="POST" action="{{ url_for('add_desserts') }}">
       <div class="row">
         <!-- Starters Name -->
         <div class="input-field col s6">
-            <input id="main_names" name="main_names" type="text" class="validate" required >
-          <label for="main_names">Name</label>
+            <input id="dessert_names" name="dessert_names" type="text" class="validate" required >
+          <label for="dessert_names">Name</label>
         </div>
       </div>
       <!-- Starters Tools -->
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="main_tools" name="main_tools" type="text" class="materialize-textarea" class="validate" required ></textarea>
-          <label for="main_tools">Tools Required</label>
+          <textarea id="dessert_tools" name="dessert_tools" type="text" class="materialize-textarea" class="validate" required ></textarea>
+          <label for="dessert_tools">Tools Required</label>
         </div>
       </div>
       <!-- Ingredients -->
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="main_ingredients" name="main_ingredients" type="text" class="materialize-textarea" class="validate" required ></textarea>
-          <label for="main_ingredients">Ingredients</label>
+          <textarea id="dessert_ingredients" name="dessert_ingredients" type="text" class="materialize-textarea" class="validate" required ></textarea>
+          <label for="dessert_ingredients">Ingredients</label>
         </div>
       </div>
       <!-- Directions -->
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="main_directions" name="main_directions" type="text" class="materialize-textarea" class="validate" required ></textarea>
-          <label for="main_directions">Directions</label>
+          <textarea id="dessert_directions" name="dessert_directions" type="text" class="materialize-textarea" class="validate" required ></textarea>
+          <label for="dessert_directions">Directions</label>
         </div>
       </div>
       <!-- submit button -->
@@ -44,12 +44,5 @@
     </form>
   </div>
 </div>
-
-
-
-
-
-
-
 
 {% endblock %}

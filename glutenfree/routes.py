@@ -106,4 +106,19 @@ def delete_mains(main_id):
 @app.route("/desserts")
 def desserts():
     desserts= list(Dessert.query.order_by(Dessert.id).all())
-    return render_template("dessert.html", desserts=desserts)
+    return render_template("desserts.html", desserts=desserts)
+
+
+@app.route("/add_desserts",  methods=["GET", "POST"])
+def add_desserts():
+    if request.method == "POST":
+        dessert = Dessert(
+            dessert_names=request.form.get("dessert_names"),
+            dessert_tools=request.form.get("dessert_tools"),
+            dessert_ingredients=request.form.get("dessert_ingredients"),
+            dessert_directions=request.form.get("dessert_directions")
+        )
+        db.session.add(dessert)
+        db.session.commit()
+        return redirect(url_for("desserts"))
+    return render_template("add_desserts.html")
