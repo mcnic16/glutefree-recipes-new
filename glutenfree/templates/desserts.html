@@ -1,6 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+<h5> Click on the name of the recipe for full details.</h5>
+  <!-- Modal Trigger -->
+  <div class="row">
+  {% for dessert in desserts %}
+  <div class="col l3 m6 s12">
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal-{{ loop.index }}">{{ dessert.dessert_names }}</a>
+  <!-- Modal Structure -->
+   <div id="modal-{{ loop.index }}" class="modal">
+    <div class="modal-content">
+      <h4>{{ dessert.dessert_names }}</h4>
+      <h5>Tools:</h5>
+      <p>{{ dessert.dessert_tools }}</p>
+      <h5>Ingredients:</h5>
+      <p>{{ dessert.dessert_ingredients }}</p>
+      <h5>Directions:</h5>
+      <p>{{ dessert.dessert_directions }}</p>
+    
+      <div class="modal-footer">
+        <a href="" class="modal-close waves-effect waves-green btn-flat">Edit</a>
+        <a href="" class="modal-close waves-effect waves-green btn-flat">Delete</a>
+      </div>
+        
+    </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 
 {% endblock %}

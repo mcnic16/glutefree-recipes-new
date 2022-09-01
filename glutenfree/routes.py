@@ -101,3 +101,9 @@ def delete_mains(main_id):
     db.session.delete(main)
     db.session.commit()
     return redirect(url_for("mains"))
+
+
+@app.route("/desserts")
+def desserts():
+    desserts= list(Dessert.query.order_by(Dessert.id).all())
+    return render_template("dessert.html", desserts=desserts)
