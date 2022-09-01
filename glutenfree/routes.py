@@ -49,6 +49,7 @@ def edit_starters(starter_id):
         starter.starter_ingredients = request.form.get("starter_ingredients"),
         starter.starter_directions = request.form.get("starter_directions")
         db.session.commit()
+        return redirect(url_for("starters"))
     return render_template("edit_starters.html", starter=starter)
 
 

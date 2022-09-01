@@ -6,15 +6,16 @@
       <div class="row">
         <!-- Starters Name -->
         <div class="input-field col s6">
-            <input id="starter_names" name="starter_names" type="text" class="validate" required >
-            {{- starter.starter_name -}}
+            <textarea id="starter_names" name="starter_names" type="text" class="materialize-textarea" class="validate" required >
+            {{- starter.starter_names -}}
+            </textarea>
           <label for="starter_names">Name</label>
         </div>
       </div>
       <!-- Starters Tools -->
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="starter_tools" name="starter_tools"type="text" class="materialize-textarea" class="validate" required >
+          <textarea id="starter_tools" name="starter_tools" type="text" class="materialize-textarea" class="validate" required >
             {{ starter.starter_tools }}
           </textarea>
           <label for="starter_tools">Tools Required</label>

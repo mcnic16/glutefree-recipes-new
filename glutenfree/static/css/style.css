@@ -57,13 +57,15 @@ main {
     right: initial;
     margin-bottom: 30px;
 }
-
+/*---------------------------------------Resizing Images in Cards-----------------*/
 .gluten-pic {
     height: 150px;
     width: 150px;
 }
-
-
+/*---------------------------------------Centering information in cards-----------------*/
+.card-center {
+    text-align: center;
+}
 
 /*---------------------------------------media-queiries-----------------*/
 
