@@ -136,4 +136,9 @@ def edit_desserts(dessert_id):
         return redirect(url_for("desserts"))
     return render_template("edit_desserts.html", dessert=dessert)
 
-
+@app.route("/delete_desserts/<int:dessert_id>")
+def delete_desserts(dessert_id):
+    dessert = Dessert.query.get_or_404(dessert_id)
+    db.session.delete(dessert)
+    db.session.commit()
+    return redirect(url_for("desserts"))
