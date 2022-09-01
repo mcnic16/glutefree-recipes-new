@@ -5,7 +5,7 @@
         <div class="row card-container">
 
             <!-- Cards -->
-            <div class="col l6 m6 s12">
+            <div class="col l4 m6 s12 column">
                 <div class="card-panel grey lighten-4">
                     <h5>Add Starter</h5>
                     <img class="gluten-pic" src="{{ url_for('static', filename='img/gluten-free-diet.jpg') }}">
@@ -15,11 +15,10 @@
                                 Add Starters <i class="fas fa-plus-square right"></i> </a>
                             </div>
                         </div>
-            
-                    
-               
-            <!-- Cards -->
-            <div class="col l6 m6 s12">
+
+
+<!-- Cards -->
+            <div class="col l4 m6 s12 column ">
                 <div class="card-panel grey lighten-4">
                     <h5>Add Starter</h5>
                     <img class="gluten-pic" src="{{ url_for('static', filename='img/gluten-free-diet.jpg') }}">
@@ -28,8 +27,36 @@
                         <a href="{{ url_for('add_starters') }}" class="btn-large blue">
                                 Add Starters <i class="fas fa-plus-square right"></i> </a>
                             </div>
+                        </div>
+
+
+
+        <!-- Cards -->
+        <div class="col l4 m6 s12 column">
+            <div class="card-panel grey lighten-4">
+                <h5>Add Starter</h5>
+                <img class="gluten-pic" src="{{ url_for('static', filename='img/gluten-free-diet.jpg') }}">
+            
+                    <p> Add your starter here for it to appear in the Starter page</p>
+                    <a href="{{ url_for('add_starters') }}" class="btn-large blue">
+                            Add Starters <i class="fas fa-plus-square right"></i> </a>
                         </div>
                     </div>
+
+        <!-- Cards -->
+        <div class="col l4 m6 s12 column">
+            <div class="card-panel grey lighten-4">
+                <h5>Add Starter</h5>
+                <img class="gluten-pic" src="{{ url_for('static', filename='img/gluten-free-diet.jpg') }}">
+            
+                    <p> Add your starter here for it to appear in the Starter page</p>
+                    <a href="{{ url_for('add_starters') }}" class="btn-large blue">
+                            Add Starters <i class="fas fa-plus-square right"></i> </a>
+                        </div>
+                    </div>
+
+        </div>  
+            
 </div> 
 
 {% endblock %}

@@ -29,7 +29,7 @@ main {
     height: 200px;
     width: 200px
 }
-
+/*---------------------------------------Centering card panels-----------------*/
 .card-panel {
     margin: 10px;
     padding: 10px;
@@ -52,9 +52,9 @@ main {
 }
 .row.card-container .col {
     width: 25%;
-    margin-left: initial !important;
-    left: initial !important;
-    right: initial !important;
+    margin-left: initial;
+    left: initial ;
+    right: initial;
     margin-bottom: 30px;
 }
 
@@ -64,12 +64,28 @@ main {
 }
 
 
-}
+
 /*---------------------------------------media-queiries-----------------*/
 
 @media screen and (max-width: 1075px) {
 
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
     .title {
         font-size: 20px;
+    }
+
+    .row.card-container .col {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 830px) {
+
+    .row.card-container .col {
+        width: 100%;
     }
 }
