@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+<h5> Click on the name of the recipe for full details.</h5>
   <!-- Modal Trigger -->
   <div class="row">
   {% for starter in starters %}
@@ -9,7 +9,7 @@
   <!-- Modal Structure -->
    <div id="modal-{{ loop.index }}" class="modal">
     <div class="modal-content">
-      <h3>{{ starter.starter_names }}</h3>
+      <h4>{{ starter.starter_names }}</h4>
       <h5>Tools:</h5>
       <p>{{ starter.starter_tools }}</p>
       <h5>Ingredients:</h5>

@@ -14,10 +14,10 @@
         <h5>Ingredients:</h5>
         <p>{{ main.main_ingredients }}</p>
         <h5>Directions:</h5>
-        <p>{{ main.main_directions }}/p>
+        <p>{{ main.main_directions }}</p>
       
         <div class="modal-footer">
-          <a href="" class="modal-close waves-effect waves-green btn-flat">Edit</a>
+          <a href="{{ url_for('edit_mains', main_id=main.id) }}" class="modal-close waves-effect waves-green btn-flat">Edit</a>
           <a href="" class="modal-close waves-effect waves-green btn-flat">Delete</a>
         </div>
           

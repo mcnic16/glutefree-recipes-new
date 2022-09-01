@@ -80,3 +80,16 @@ def add_mains():
         db.session.commit()
         return redirect(url_for("mains"))
     return render_template("add_mains.html")
+
+
+@app.route("/edit_mains/<int:main_id>",  methods=["GET", "POST"])
+def edit_mains(main_id):
+    main = Main.query.get_or_404(main_id)
+    if request.method == "POST":
+        main.main_names = request.form.get("main_names"),
+        main.main_tools = request.form.get("main_tools"),
+        main.main_ingredients = request.form.get("main_ingredients"),
+        main.main_directions = request.form.get("main_directions")
+        db.session.commit()
+        return redirect(url_for("mains"))
+    return render_template("edit_mains.html", main=main)
