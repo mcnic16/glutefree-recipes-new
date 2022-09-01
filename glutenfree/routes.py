@@ -150,3 +150,18 @@ def drinks():
     return render_template("drinks.html", drinks=drinks)
 
 
+@app.route("/add_drinks",  methods=["GET", "POST"])
+def add_drinks():
+    if request.method == "POST":
+        drink = Drink(
+            drink_names=request.form.get("drink_names"),
+            drink_tools=request.form.get("drink_tools"),
+            drink_ingredients=request.form.get("drink_ingredients"),
+            drink_directions=request.form.get("drink_directions")
+        )
+        db.session.add(drink)
+        db.session.commit()
+        return redirect(url_for("drinks"))
+    return render_template("add_drinks.html")
+
+
