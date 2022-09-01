@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h5> Click on the name of the recipe for full details.</h5>
+
 <!-- Modal Trigger -->
-<div class="container">
+<div class="container col s12 m6 l3">
     {% for main in mains %}
     <a class="waves-effect waves-light btn modal-trigger" href="#modal-{{ loop.index }}">{{ main.main_names }}</a>
     <!-- Modal Structure -->
