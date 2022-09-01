@@ -19,16 +19,19 @@
 
     <header >
     <nav class="blue">
-    <div class="nav-wrapper">
-      <a href="#!" class="title">Gluten Free Recipes</a>
+    <div class="nav-wrapper ">
+      <div class="gluten-nav">
+      <h5 class="title">Gluten Free Recipes</h5>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-burger"></i></a>
-      <ul class="right hide-on-med-and-down">
+      <ul class="gluten-list right hide-on-med-and-down">
         <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="{{ url_for('starters') }}">Starters</a></li>
         <li><a href="{{ url_for('mains') }}">Mains</a>/a></li>
         <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
         <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
       </ul>
+    </div>
+      
     </div>
   </nav>
 
@@ -39,6 +42,8 @@
     <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
     <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
   </ul>
+
+ 
 </header>
 
         <main class="container">
