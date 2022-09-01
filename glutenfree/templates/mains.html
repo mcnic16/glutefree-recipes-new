@@ -18,7 +18,7 @@
       
         <div class="modal-footer">
           <a href="{{ url_for('edit_mains', main_id=main.id) }}" class="modal-close waves-effect waves-green btn-flat">Edit</a>
-          <a href="" class="modal-close waves-effect waves-green btn-flat">Delete</a>
+          <a href="{{ url_for('delete_mains', main_id=main.id) }}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
         </div>
           
       </div>

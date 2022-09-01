@@ -93,3 +93,11 @@ def edit_mains(main_id):
         db.session.commit()
         return redirect(url_for("mains"))
     return render_template("edit_mains.html", main=main)
+
+
+@app.route("/delete_mains/<int:main_id>")
+def delete_mains(main_id):
+    main = Main.query.get_or_404(main_id)
+    db.session.delete(main)
+    db.session.commit()
+    return redirect(url_for("mains"))
