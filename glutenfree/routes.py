@@ -142,3 +142,11 @@ def delete_desserts(dessert_id):
     db.session.delete(dessert)
     db.session.commit()
     return redirect(url_for("desserts"))
+
+
+@app.route("/drinks")
+def drinks():
+    drinks= list(Drink.query.order_by(Drink.id).all())
+    return render_template("drinks.html", drinks=drinks)
+
+
