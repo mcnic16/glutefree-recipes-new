@@ -15,9 +15,10 @@ else:
     uri = os.environ.get("DATABASE_URL")
     print (uri, "$$$&&&log$$$")
     if uri.startswith("postgres://"):
+        print ("%%%%newthis$$$")
         uri = uri.replace("postgres://", "postgresql://", 1)
     app.config["SQLALCHEMY_DATABASE_URI"] = uri  # heroku
-
+    print (uri, "%%%%yyyy^^^")
 
 db = SQLAlchemy(app)
 
