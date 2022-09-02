@@ -12,6 +12,7 @@ def home():
 def cuisine():
     return render_template("cuisine.html")
 
+
 @app.route("/starters")
 def starters():
     starters = list(Starter.query.order_by(Starter.id).all())
