@@ -14,7 +14,9 @@ I had planned to add a search bar and authentication but time was against me, as
 <img src="glutenfree/testhtmlscreenshots/starters.png" width="400px">
 
 
-## User Experience
+### Wireframes
+
+<img src="glutenfree/testhtmlscreenshots/wireframe.jpg" width="400px">
 
 ### User stories
 As a visitor of the website, I would like the website to be easy to navigate, not bloated like some websites are, and the for the recipes to be easy to write, find and with easy options to edit and delete the recipes. 
@@ -55,7 +57,7 @@ The main colour scheme of the website is blue and white, and recipes in green mo
   <h2 align="center"><img src="glutenfree/testhtmlscreenshots/basetest.png" width="400px"></h2>
   <h2 align="center"><img src="glutenfree/testhtmlscreenshots/cusinetest.png" width="400px"></h2>
   <h2 align="center"><img src="glutenfree/testhtmlscreenshots/addstarter.png" width="400px"></h2>
-  <h2 align="center"><img src="glutenfree/testhtmlscreenshots/home.png" width="400px"></h2>
+
 
   and more can be seen within the Git Commits.
 
@@ -70,7 +72,7 @@ __init.py__ failed :
 
 <h2 align="center"><img src="glutenfree/testhtmlscreenshots/init.png" width="400px"></h2
 
-I have tested all links, everything works. The things that are not working is registering, Logging in, Logging out because I ran out of time.
+I have tested all links, everything works. The things that are not working is registering, Logging in, Logging out and the search bar because I ran out of time.
 
 Further Testing
 This site has been checked on various phones, tablets, a laptop and a desktop.
@@ -81,7 +83,7 @@ It has also been test on [amiresponsive](https://ui.dev/amiresponsive)
 <h2 align="center"><img src="glutenfree/testhtmlscreenshots/responsive.png" width="400px"></h2>
 
 ## Bugs
-Like previously mentioned, register, log in and out function are not working.
+Like previously mentioned, register, log in and out function and search bar are not working.
 
 ## Deployment
 
@@ -120,6 +122,16 @@ Like previously mentioned, register, log in and out function are not working.
     - exit()
 
 12. Everything should be connected and working now, so click the Open App button.
+
+This project can also be deployed by Github:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
 
 ### Forking the GitHub Repository
 
