@@ -36,6 +36,7 @@
                     <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
                     <li><a href="{{ url_for('auth.register') }}">Register</a></li>
                 </ul>
+            </div>
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
@@ -57,10 +58,11 @@
                     <i class="fa fa-search ">
                     </i>
                 </button>
+            
             </form>
-        </div>
     </div>
     </header>
+    
 
     <main class="container">
         {% block content %}
