@@ -49,7 +49,10 @@ The main colour scheme of the website is blue and white, and recipes in green mo
 
   -  The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the front ednd of the project to ensure there were no syntax errors in the project.
 
-  
+  -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+  The Base template failed on the following:
+  <h2 align="center"><img src="glutenfree/testhtmlscreenshots/basetest.png" width="400px"></h2>
 
 
 

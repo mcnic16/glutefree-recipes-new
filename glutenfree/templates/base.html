@@ -21,7 +21,7 @@
 
     <header>
         <nav class="blue">
-            <div class="nav-wrapper gluten-nav ">
+            <div class="nav-wrapper gluten-nav">
                 <h5 class="title">Gluten Free Recipes</h5>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-burger"></i></a>
                 <ul class="gluten-list right hide-on-med-and-down">
@@ -36,10 +36,6 @@
                     <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
                     <li><a href="{{ url_for('auth.register') }}">Register</a></li>
                 </ul>
-
-                
-
-
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
@@ -56,15 +52,13 @@
         <!-- search bar right align -->
         <div class="search">
             <form method="POST" action="#">
-
                 <input type="text" placeholder=" Search Courses" name="search">
-                <button>
+                    <button>
                     <i class="fa fa-search ">
                     </i>
                 </button>
             </form>
         </div>
-
     </header>
 
     <main class="container">
@@ -79,9 +73,7 @@
             <div class="row">
             </div>
         </div>
-
-
-
+    </footer>
 
 
         <script src="https://code.jquery.com/jquery-3.6.1.js"
