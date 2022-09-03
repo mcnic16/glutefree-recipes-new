@@ -8,17 +8,13 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
-print("%%%%%This works^^^")
 if os.environ.get("DEVELOPMENT") == "True":
     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")  # local
 else:
     uri = os.environ.get("DATABASE_URL")
-    print (uri, "$$$&&&log$$$")
     if uri.startswith("postgres://"):
-        print ("%%%%newthis$$$")
         uri = uri.replace("postgres://", "postgresql://", 1)
     app.config["SQLALCHEMY_DATABASE_URI"] = uri  # heroku
-    print (uri, "%%%%yyyy^^^")
 
 db = SQLAlchemy(app)
 

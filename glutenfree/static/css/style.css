@@ -27,6 +27,12 @@ main {
     left: 0;
 }
 
+.gluten-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .start {
     height: 200px;
     width: 200px

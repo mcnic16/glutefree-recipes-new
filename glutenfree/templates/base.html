@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Gluten Free Recipes</title>
@@ -17,53 +19,59 @@
 
 <body>
 
-    <header >
-    <nav class="blue">
-    <div class="nav-wrapper gluten-nav ">
-      <h5 class="title">Gluten Free Recipes</h5>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-burger"></i></a>
-      <ul class="gluten-list right hide-on-med-and-down">
-        <li><a href="{{ url_for('home') }}">Home</a></li>
-        <li><a href="{{ url_for('starters') }}">Starters</a></li>
-        <li><a href="{{ url_for('mains') }}">Mains</a>/a></li>
-        <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
-        <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
-      </ul>
-       
-      
-  </nav>
+    <header>
+        <nav class="blue">
+            <div class="nav-wrapper gluten-nav ">
+                <h5 class="title">Gluten Free Recipes</h5>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-burger"></i></a>
+                <ul class="gluten-list right hide-on-med-and-down">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('starters') }}">Starters</a></li>
+                    <li><a href="{{ url_for('mains') }}">Mains</a>/a></li>
+                    <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
+                    <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
+                </ul>
+                <ul class="gluten-right right hide-on-med-and-down">
+                    <li><a href="#">Log Out</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="{{ url_for('home') }}">Home</a></li>
-    <li><a href="{{ url_for('starters') }}">Starters</a></li>
-    <li><a href="{{ url_for('mains') }}">Mains</a></li>
-    <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
-    <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
-  </ul>
 
-  <!-- search bar right align -->
-  <div class="search">
-    <form method = "POST" action="#">
-      
-        <input type="text"
-            placeholder=" Search Courses"
-            name="search">
-        <button>
-            <i class="fa fa-search ">
-            </i>
-        </button>
-    </form>
-</div>
+        </nav>
 
-</header>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('starters') }}">Starters</a></li>
+            <li><a href="{{ url_for('mains') }}">Mains</a></li>
+            <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
+            <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
 
-        <main class="container">
-            {% block content %}
-            {% endblock %}
-    
-        </main>
-    
-        
+        <!-- search bar right align -->
+        <div class="search">
+            <form method="POST" action="#">
+
+                <input type="text" placeholder=" Search Courses" name="search">
+                <button>
+                    <i class="fa fa-search ">
+                    </i>
+                </button>
+            </form>
+        </div>
+
+    </header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+
     <footer class="blue page-footer">
         <div class="container">
             <div class="row">
@@ -71,14 +79,14 @@
         </div>
 
 
-    
 
 
-    <script src="https://code.jquery.com/jquery-3.6.1.js"
-        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-        
+
+        <script src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
 </html>

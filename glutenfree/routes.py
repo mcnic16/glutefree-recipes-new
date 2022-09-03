@@ -1,6 +1,12 @@
 from flask import render_template, request, redirect, url_for
 from glutenfree import app, db
 from glutenfree.models import Starter, Main, Dessert, Drink
+from werkzeug.security import generate_password_hash, check_password_hash
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
 
 
 @app.route("/")
