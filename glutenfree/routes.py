@@ -3,6 +3,8 @@ from glutenfree import app, db
 from glutenfree.models import Starter, Main, Dessert, Drink, User
 
 
+main = Blueprint('main', __name__)
+
 @app.route("/")
 def home():
     return render_template("cuisine.html")

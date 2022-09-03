@@ -32,10 +32,12 @@
                     <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
                 </ul>
                 <ul class="gluten-right right hide-on-med-and-down">
-                    <li><a href="#">Log Out</a></li>
-                    <li><a href="">Log In</a></li>
-                    <li><a href="">{{ url_for('auth.register') }}</a>Register</li>
+                    <li><a href="{{ url_for('auth.logout') }}">Log Out</a></li>
+                    <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('auth.register') }}">Register</a></li>
                 </ul>
+
+                
 
 
         </nav>
@@ -46,9 +48,9 @@
             <li><a href="{{ url_for('mains') }}">Mains</a></li>
             <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
             <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
-            <li><a href="#">Log Out</a></li>
-            <li><a href="">Log In</a></li>
-            <li><a href="">{{ url_for('auth.register') }}</a>Register</li>
+            <li><a href="{{ url_for('auth.logout') }}">Log Out</a></li>
+            <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
+            <li><a href="{{ url_for('auth.register') }}">>Register</a></li>
         </ul>
 
         <!-- search bar right align -->
