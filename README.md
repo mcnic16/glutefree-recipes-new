@@ -7,9 +7,11 @@
 This project, is a Gluten-Free recipe database where you can can enter your recipes on the home page, and they will show on the appropriate pages, i.e Starters , Mains etc.
 There is also the option to edit or delete these recipes.
 I chose this project because a family member has celiac disease and has to maintian a gluten-free diet. 
+I had planned to add a search bar and authentication but time was against me, as I had technical problems with deploying to Heroku, so the Frontend is done but I ran out of time to complete the back-end.
 
 
-screenshots of site here
+<img src="glutenfree/testhtmlscreenshots/home.png" width="400px">
+<img src="glutenfree/testhtmlscreenshots/starters.png" width="400px">
 
 
 ## User Experience
@@ -28,6 +30,26 @@ The main colour scheme of the website is blue and white, and recipes in green mo
 - Python
 - Flask
 - Postgresl
+
+## Frameworks, Libraries & Programs Used
+
+ 
+- [Materialize:](https://materializecss.com/)
+ Materialize was used for the styling
+- [Font Awesome:](https://fonts.google.com/)
+ Font Awesome was used on some pages on the website 
+- [Git:](https://git-scm.com/)
+ Git was used for the Gitpod terminal to commit to Git and Push to GitHub.
+- [GitHub:](https://github.com/)
+ GitHub is used to store the projects code after being pushed from Git.
+- [Herouko:](https://dashboard.heroku.com/)
+  Herouku was used to deploy the project
+
+  ## Testing
+
+  -  The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the front ednd of the project to ensure there were no syntax errors in the project.
+
+  
 
 
 

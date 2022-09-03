@@ -2,61 +2,55 @@
 {% block content %}
 
 <div class="container">
-        <div class="row card-container">
+    <div class="row card-container">
 
-            <!-- Cards -->
-            <div class="col l4 m6 s12">
-                <div class="card-panel grey lighten-4 card-center">
-                    <h5>Add Starters</h5>
-                    <img class="gluten-pic" src="{{ url_for('static', filename='img/starter.jpg') }}">
-                
-                        <p> Add your starter here for it to appear in the Starter page</p>
-                        <a href="{{ url_for('add_starters') }}" class="btn-large blue">
-                                Add Starters <i class="fas fa-plus-square right"></i> </a>
-                            </div>
-                        </div>
+        <!-- Sarter Card -->
+        <div class="col l4 m6 s12">
+            <div class="card-panel grey lighten-4 card-center">
+                <h5>Add Starters</h5>
+                <img class="gluten-pic" src="{{ url_for('static', filename='img/starter.jpg') }}" alt="starters">
+                <p> Add your starter here for it to appear in the Starter page</p>
+                <a href="{{ url_for('add_starters') }}" class="btn-large blue">
+                    Add Starters <i class="fas fa-plus-square right"></i> </a>
+            </div>
+        </div>
 
+        <!-- Mains Card -->
+        <div class="col l4 m6 s12">
+            <div class="card-panel grey lighten-4 card-center">
+                <h5>Add Mains</h5>
+                <img class="gluten-pic" src="{{ url_for('static', filename='img/mains.jpg') }}" alt ="mains">
+                <p> Add your Mains here for it to appear in the Mains page</p>
+                <a href="{{ url_for('add_mains') }}" class="btn-large blue">
+                    Add Main Course <i class="fas fa-plus-square right"></i> </a>
+            </div>
+        </div>
 
-<!-- Cards -->
-            <div class="col l4 m6 s12">
-                <div class="card-panel grey lighten-4 card-center">
-                    <h5>Add Mains</h5>
-                    <img class="gluten-pic" src="{{ url_for('static', filename='img/mains.jpg') }}">
-                
-                        <p> Add your Mains here for it to appear in the Mains page</p>
-                        <a href="{{ url_for('add_mains') }}" class="btn-large blue">
-                                Add Main Course <i class="fas fa-plus-square right"></i> </a>
-                            </div>
-                        </div>
-
-
-
-        <!-- Cards -->
+        <!-- Dessert Cards -->
         <div class="col l4 m6 s12">
             <div class="card-panel grey lighten-4 card-center">
                 <h5>Add Desserts</h5>
-                <img class="gluten-pic" src="{{ url_for('static', filename='img/desserts.jpg') }}">
-            
-                    <p> Add your desserts here for it to appear in the Desserts page</p>
-                    <a href="{{ url_for('add_desserts') }}" class="btn-large blue">
-                            Add Desserts <i class="fas fa-plus-square right"></i> </a>
-                        </div>
-                    </div>
+                <img class="gluten-pic" src="{{ url_for('static', filename='img/desserts.jpg') }}" alt="desserts">
+                <p> Add your desserts here for it to appear in the Desserts page</p>
+                <a href="{{ url_for('add_desserts') }}" class="btn-large blue">
+                    Add Desserts <i class="fas fa-plus-square right"></i> </a>
+            </div>
+        </div>
 
-        <!-- Cards -->
+        <!-- Drink Card -->
         <div class="col l4 m6 s12">
             <div class="card-panel grey lighten-4 card-center">
                 <h5>Add Drinks</h5>
-                <img class="gluten-pic" src="{{ url_for('static', filename='img/drinks.png') }}">
-            
-                    <p> Add your drinks here for it to appear in the Drinks page</p>
-                    <a href="{{ url_for('add_drinks') }}" class="btn-large blue">
-                            Add Drinks <i class="fas fa-plus-square right"></i> </a>
-                        </div>
-                    </div>
+                <img class="gluten-pic" src="{{ url_for('static', filename='img/drinks.png') }}" alt="drinks">
 
-        </div>  
-            
-</div> 
+                <p> Add your drinks here for it to appear in the Drinks page</p>
+                <a href="{{ url_for('add_drinks') }}" class="btn-large blue">
+                    Add Drinks <i class="fas fa-plus-square right"></i> </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
 
 {% endblock %}
