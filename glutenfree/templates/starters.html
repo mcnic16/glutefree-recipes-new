@@ -3,28 +3,29 @@
 
 <h4 class="card-center">Starters</h4>
 <h5 class="card-center"> Click on the name of the recipe for full details.</h5>
-  <!-- Modal Trigger -->
-  <div class="row">
+<!------ Modal Trigger ----------->
+<div class="row">
   {% for starter in starters %}
   <div class="col l3 m6 s12">
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal-{{ loop.index }}">{{ starter.starter_names }}</a>
-  <!-- Modal Structure -->
-   <div id="modal-{{ loop.index }}" class="modal">
-    <div class="modal-content">
-      <h4>{{ starter.starter_names }}</h4>
-      <h5>Tools:</h5>
-      <p>{{ starter.starter_tools }}</p>
-      <h5>Ingredients:</h5>
-      <p>{{ starter.starter_ingredients }}</p>
-      <h5>Directions:</h5>
-      <p>{{ starter.starter_directions }}</p>
-    
-      <div class="modal-footer">
-        <a href="{{ url_for('edit_starters', starter_id=starter.id) }}" class="modal-close waves-effect waves-green btn-flat">Edit</a>
-        <a href="{{ url_for('delete_starters', starter_id=starter.id) }}" class="modal-close waves-effect waves-green btn-flat">Delete</a>
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal-{{ loop.index }}">{{ starter.starter_names }}</a>
+    <!---------- Modal Structure ------------->
+    <div id="modal-{{ loop.index }}" class="modal">
+      <div class="modal-content">
+        <h4>{{ starter.starter_names }}</h4>
+        <h5>Tools:</h5>
+        <p>{{ starter.starter_tools }}</p>
+        <h5>Ingredients:</h5>
+        <p>{{ starter.starter_ingredients }}</p>
+        <h5>Directions:</h5>
+        <p>{{ starter.starter_directions }}</p>
+
+        <div class="modal-footer">
+          <a href="{{ url_for('edit_starters', starter_id=starter.id) }}"
+            class="modal-close waves-effect waves-green btn-flat">Edit</a>
+          <a href="{{ url_for('delete_starters', starter_id=starter.id) }}"
+            class="modal-close waves-effect waves-green btn-flat">Delete</a>
+        </div>
       </div>
-        
-    </div>
     </div>
   </div>
   {% endfor %}

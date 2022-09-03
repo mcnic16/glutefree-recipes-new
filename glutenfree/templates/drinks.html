@@ -3,12 +3,12 @@
 
 <h4 class="card-center">Drinks</h4>
 <h5 class="card-center"> Click on the name of the recipe for full details.</h5>
-  <!-- Modal Trigger -->
+  <!-------- Modal Trigger --------->
   <div class="row">
   {% for drink in drinks %}
   <div class="col l3 m6 s12">
   <a class="waves-effect waves-light btn modal-trigger" href="#modal-{{ loop.index }}">{{ drink.drink_names }}</a>
-  <!-- Modal Structure -->
+  <!-------- Modal Structure ----------->
    <div id="modal-{{ loop.index }}" class="modal">
     <div class="modal-content">
       <h4>{{ drink.drink_names }}</h4>

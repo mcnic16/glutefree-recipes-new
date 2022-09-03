@@ -3,8 +3,7 @@
 
 <div class="container">
     <div class="row card-container">
-
-        <!-- Sarter Card -->
+        <!----- Starter Card --------->
         <div class="col l4 m6 s12">
             <div class="card-panel grey lighten-4 card-center">
                 <h5>Add Starters</h5>
@@ -15,18 +14,18 @@
             </div>
         </div>
 
-        <!-- Mains Card -->
+        <!------- Mains Card ------------>
         <div class="col l4 m6 s12">
-            <div class="card-panel grey lighten-4 card-center">
+             <div class="card-panel grey lighten-4 card-center">
                 <h5>Add Mains</h5>
-                <img class="gluten-pic" src="{{ url_for('static', filename='img/mains.jpg') }}" alt ="mains">
+                <img class="gluten-pic" src="{{ url_for('static', filename='img/mains.jpg') }}" alt="mains">
                 <p> Add your Mains here for it to appear in the Mains page</p>
                 <a href="{{ url_for('add_mains') }}" class="btn-large blue">
                     Add Main Course <i class="fas fa-plus-square right"></i> </a>
             </div>
         </div>
 
-        <!-- Dessert Cards -->
+        <!-------- Dessert Cards ---------->
         <div class="col l4 m6 s12">
             <div class="card-panel grey lighten-4 card-center">
                 <h5>Add Desserts</h5>
@@ -37,7 +36,7 @@
             </div>
         </div>
 
-        <!-- Drink Card -->
+        <!------- Drink Card ---------------->
         <div class="col l4 m6 s12">
             <div class="card-panel grey lighten-4 card-center">
                 <h5>Add Drinks</h5>
@@ -48,9 +47,6 @@
                     Add Drinks <i class="fas fa-plus-square right"></i> </a>
             </div>
         </div>
-
     </div>
-
 </div>
-
 {% endblock %}

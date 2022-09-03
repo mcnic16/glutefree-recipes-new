@@ -1,42 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align">Register</h3>
-
-    <div class="row">
-        {% with messages = get_flashed_messages() %}
-{% if messages %}
+<h3 class="center-align">Register</h3>
+<div class="row">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
     <div class="notification is-danger">
         {{ messages[0] }}. Go to <a href="{{ url_for('auth.login') }}">login page</a>.
     </div>
-{% endif %}
-{% endwith %}
-        <form class="col s12 m8 offset-m2" method="POST" action="/register">
-            <div class="card-panel">
-                <!-- username -->
-                <div class="row">
-					<div class="input-field col s12">
-						<i class="fas fa-user-plus prefix light-blue-text text-darken-4"></i>
-						<input id="username" name="username" type="text" class="validate">
-						<label for="username">Username</label>
-					</div>
-                </div>
-                <!-- password -->
-                <div class="row">
-                    <div class="input-field col s12">
-						<i class="fas fa-user-lock prefix light-blue-text text-darken-4"></i>
-                        <input id="password" name="password" type="password" class="validate">
-                        <label for="password">Password</label>
-                    </div>
-                </div>
-                <!-- register -->
-                <div class="row">
-                    <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
-                        Register <i class="fas fa-sign-in-alt"></i>
-                    </button>
+    {% endif %}
+    {% endwith %}
+    <form class="col s12 m8 offset-m2" method="POST" action="/register">
+        <div class="card-panel">
+            <!---------- username --------------->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-plus prefix light-blue-text text-darken-4"></i>
+                    <input id="username" name="username" type="text" class="validate">
+                    <label for="username">Username</label>
                 </div>
             </div>
-        </form>
-    </div>
+            <!------------ password -------------->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-lock prefix light-blue-text text-darken-4"></i>
+                    <input id="password" name="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <!-------- register ----------->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
+                    Register <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
 
 {% endblock %}

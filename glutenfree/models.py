@@ -3,6 +3,7 @@ from glutenfree import db
 
 
 class User(UserMixin, db.Model):
+    #for user login
     id = db.Column(db.Integer, primary_key=True)
     password = db.Column(db.Text, unique=True)
     name = db.Column(db.Text, unique=True)
@@ -62,4 +63,3 @@ class Drink(db.Model):
         return f"Drink('{self.id}', '{self.drink_names}',\
             '{self.drink_tools}', '{self.drink_ingredients},\
                 '{self.drink_directions}')"
-                

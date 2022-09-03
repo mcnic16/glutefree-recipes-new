@@ -32,7 +32,7 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-# blueprint for auth routes 
+# blueprint for auth routes
 from .auth import auth as auth_blueprint
 app.register_blueprint(auth_blueprint)
 

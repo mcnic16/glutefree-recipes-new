@@ -10,10 +10,12 @@ $(document).ready(function(){
  let collapsibles = document.querySelectorAll(".collapsible");
  M.Collapsible.init(collapsibles);
 
+ // forms
  $(document).ready(function() {
     $('input#input_text, textarea#textarea2').characterCounter();
   });
 
+  // Modals
   $(document).ready(function(){
     $('.modal').modal();
   });

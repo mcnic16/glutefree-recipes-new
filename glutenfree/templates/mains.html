@@ -4,12 +4,12 @@
 <h4 class="card-center">Mains</h4>
 <h5 class="card-center"> Click on the name of the recipe for full details.</h5>
 
-<!-- Modal Trigger -->
+<!--------- Modal Trigger --------->
 <div class="row">
     {% for main in mains %}
     <div class="col l3 m6 s12">
     <a class="waves-effect waves-light btn modal-trigger" href="#modal-{{ loop.index }}">{{ main.main_names }}</a>
-    <!-- Modal Structure -->
+    <!------Modal Structure ----->
      <div id="modal-{{ loop.index }}" class="modal">
       <div class="modal-content">
         <h3>{{ main.main_names }}</h3>

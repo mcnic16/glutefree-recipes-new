@@ -20,6 +20,7 @@
 <body>
 
     <header>
+        <!----Navbar----->
         <nav class="blue">
             <div class="nav-wrapper gluten-nav">
                 <h5 class="title">Gluten Free Recipes</h5>
@@ -31,6 +32,7 @@
                     <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
                     <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
                 </ul>
+        <!------------right side menu ------------->
                 <ul class="gluten-right right hide-on-med-and-down">
                     <li><a href="{{ url_for('auth.logout') }}">Log Out</a></li>
                     <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
@@ -38,19 +40,18 @@
                 </ul>
             </div>
         </nav>
-
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('starters') }}">Starters</a></li>
-            <li><a href="{{ url_for('mains') }}">Mains</a></li>
-            <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
-            <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
-            <li><a href="{{ url_for('auth.logout') }}">Log Out</a></li>
-            <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
-            <li><a href="{{ url_for('auth.register') }}">Register</a></li>
-        </ul>
-
-        <!-- search bar right align -->
+        <!------------Responsive Menu----------->
+                 <ul class="sidenav" id="mobile-demo">
+                     <li><a href="{{ url_for('home') }}">Home</a></li>
+                     <li><a href="{{ url_for('starters') }}">Starters</a></li>
+                     <li><a href="{{ url_for('mains') }}">Mains</a></li>
+                     <li><a href="{{ url_for('desserts') }}">Desserts</a></li>
+                     <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
+                     <li><a href="{{ url_for('auth.logout') }}">Log Out</a></li>
+                     <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
+                     <li><a href="{{ url_for('auth.register') }}">Register</a></li>
+                </ul>
+        <!-------- search bar----------->
         <div class="search">
             <form method="POST" action="#">
                 <input type="text" placeholder=" Search Courses" name="search">
@@ -58,18 +59,15 @@
                     <i class="fa fa-search ">
                     </i>
                 </button>
-            
-            </form>
-    </div>
+             </form>
+        </div>
     </header>
     
 
     <main class="container">
         {% block content %}
         {% endblock %}
-
     </main>
-
 
     <footer class="blue page-footer">
         <div class="container">

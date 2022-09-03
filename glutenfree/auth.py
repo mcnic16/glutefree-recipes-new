@@ -9,11 +9,13 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login')
 def login():
+    # log in
     return render_template('login.html')
 
 
 @auth.route('/login', methods=['POST'])
 def login_post():
+    # log in
     password = request.form.get('password')
     remember = True if request.form.get('remember') else False
     user = User.query.filter_by(name=name).first()
@@ -26,6 +28,7 @@ def login_post():
 
 @auth.route('/register')
 def register():
+    # register user
     return render_template('register.html')
 
 
