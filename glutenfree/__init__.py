@@ -2,6 +2,8 @@ import os
 import re
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
+
 if os.path.exists("env.py"):
     import env  # noqa
 
@@ -17,6 +19,16 @@ else:
     app.config["SQLALCHEMY_DATABASE_URI"] = uri  # heroku
 
 db = SQLAlchemy(app)
+
+login_manager = LoginManager()
+login_manager.login_view = 'auth.login'
+login_manager.init_app(app)
+
+from .models import User
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
 # blueprint for auth routes 
 from .auth import auth as auth_blueprint

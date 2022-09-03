@@ -1,7 +1,8 @@
+from flask_login import UserMixin
 from glutenfree import db
 
 
-class User(db.Model):
+class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     password = db.Column(db.Text, unique=True)
     name = db.Column(db.Text, unique=True)
