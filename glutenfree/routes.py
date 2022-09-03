@@ -2,7 +2,6 @@ from flask import render_template, request, redirect, url_for, Blueprint
 from glutenfree import app, db
 from glutenfree.models import Starter, Main, Dessert, Drink, User
 
-main = Blueprint('main', __name__)
 
 @app.route("/")
 def home():
