@@ -6,6 +6,7 @@ from glutenfree import db
 
 auth = Blueprint('auth', __name__)
 
+
 @auth.route('/login')
 def login():
     return render_template('login.html')
@@ -30,21 +31,23 @@ def register():
 
 @auth.route('/register', methods=['POST'])
 def register_post():
-    # validate and add user to database 
+    # validate and add user to database
     name = request.form.get('name')
     password = request.form.get('password')
-    user = User.query.filter_by(name=name).first() 
+    user = User.query.filter_by(name=name).first()
     if user:
         flash('name already exists')
         return redirect(url_for('auth.register'))
 
     # create a new user with the form data
-    new_user = User(name=name, password=generate_password_hash(password, method='sha256'))
+    new_user = User(name=name, password=generate_password_hash(
+        password, method='sha256'))
 
     db.session.add(new_user)
     db.session.commit()
 
     return redirect(url_for('auth.login'))
+
 
 @auth.route('/logout')
 def logout():

@@ -66,8 +66,9 @@ The main colour scheme of the website is blue and white, and recipes in green mo
 The Python Code was checked by: [pep8](http://pep8online.com/)
 routes.py failed :
 <h2 align="center"><img src="glutenfree/testhtmlscreenshots/routes.png" width="400px"></h2>
+__init.py__ failed :
 
-
+<h2 align="center"><img src="glutenfree/testhtmlscreenshots/init.png" width="400px"></h2
 
 I have tested all links, everything works. The things that are not working is registering, Logging in, Logging out because I ran out of time.
 
