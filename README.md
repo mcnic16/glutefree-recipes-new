@@ -63,7 +63,10 @@ The main colour scheme of the website is blue and white, and recipes in green mo
 <h2 align="center"><img src="glutenfree/testhtmlscreenshots/css.png" width="400px"></h2>
 
  
-The Python Code passed: [online-ide.com](https://www.online-ide.com/online_python_syntax_checker)
+The Python Code was checked by: [pep8](http://pep8online.com/)
+routes.py failed :
+<h2 align="center"><img src="glutenfree/testhtmlscreenshots/routes.png" width="400px"></h2>
+
 
 
 I have tested all links, everything works. The things that are not working is registering, Logging in, Logging out because I ran out of time.
@@ -150,6 +153,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Acknowledgements
 -   My Mentor for continuous helpful feedback.
 -   Tutor support at Code Institute for their support
+-   Images were from a Google Image search for pictures of GlutenFree food
+
 
 
 

@@ -5,6 +5,7 @@ from glutenfree.models import Starter, Main, Dessert, Drink, User
 
 main = Blueprint('main', __name__)
 
+
 @app.route("/")
 def home():
     return render_template("cuisine.html")
@@ -24,8 +25,6 @@ def starters():
 @app.route("/add_cuisine")
 def add_cuisine():
     return render_template("add_cuisine.html")
-
-
 
 
 @app.route("/add_starters",  methods=["GET", "POST"])
@@ -66,7 +65,7 @@ def delete_starters(starter_id):
 
 @app.route("/mains")
 def mains():
-    mains= list(Main.query.order_by(Main.id).all())
+    mains = list(Main.query.order_by(Main.id).all())
     return render_template("mains.html", mains=mains)
 
 
@@ -108,7 +107,7 @@ def delete_mains(main_id):
 
 @app.route("/desserts")
 def desserts():
-    desserts= list(Dessert.query.order_by(Dessert.id).all())
+    desserts = list(Dessert.query.order_by(Dessert.id).all())
     return render_template("desserts.html", desserts=desserts)
 
 
@@ -139,6 +138,7 @@ def edit_desserts(dessert_id):
         return redirect(url_for("desserts"))
     return render_template("edit_desserts.html", dessert=dessert)
 
+
 @app.route("/delete_desserts/<int:dessert_id>")
 def delete_desserts(dessert_id):
     dessert = Dessert.query.get_or_404(dessert_id)
@@ -149,7 +149,7 @@ def delete_desserts(dessert_id):
 
 @app.route("/drinks")
 def drinks():
-    drinks= list(Drink.query.order_by(Drink.id).all())
+    drinks = list(Drink.query.order_by(Drink.id).all())
     return render_template("drinks.html", drinks=drinks)
 
 
@@ -167,6 +167,7 @@ def add_drinks():
         return redirect(url_for("drinks"))
     return render_template("add_drinks.html")
 
+
 @app.route("/edit_drinks/<int:drink_id>",  methods=["GET", "POST"])
 def edit_drinks(drink_id):
     drink = Drink.query.get_or_404(drink_id)
@@ -178,6 +179,4 @@ def edit_drinks(drink_id):
         db.session.commit()
         return redirect(url_for("drinks"))
     return render_template("edit_drinks.html", drink=drink)
-
-
-
+    

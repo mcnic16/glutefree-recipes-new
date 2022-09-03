@@ -62,5 +62,4 @@ class Drink(db.Model):
         return f"Drink('{self.id}', '{self.drink_names}',\
             '{self.drink_tools}', '{self.drink_ingredients},\
                 '{self.drink_directions}')"
-
-
+                
