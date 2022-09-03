@@ -6,16 +6,15 @@
 <div class="row">
   <form class="col s12" method="POST" action="{{ url_for('edit_drinks', drink_id=drink.id) }}">
       <div class="row">
-        <!-- Mains Name -->
+        <!-- Drinks Name -->
         <div class="input-field col s6">
-            <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4 "></i>
             <textarea id="drink_names" name="drink_names" class="materialize-textarea validate" required >
             {{- drink.drink_names -}}
             </textarea>
           <label for="drink_names">Name</label>
         </div>
       </div>
-      <!-- Mains Tools -->
+      <!-- Drinks Tools -->
       <div class="row">
         <div class="input-field col s12">
             <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
@@ -55,5 +54,6 @@
     </div>
     </form>
   </div>
+</div>
 
 {% endblock %}
