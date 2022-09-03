@@ -1,13 +1,8 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, Blueprint
 from glutenfree import app, db
-from glutenfree.models import Starter, Main, Dessert, Drink
-from werkzeug.security import generate_password_hash, check_password_hash
+from glutenfree.models import Starter, Main, Dessert, Drink, User
 
-
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    return render_template("register.html")
-
+main = Blueprint('main', __name__)
 
 @app.route("/")
 def home():

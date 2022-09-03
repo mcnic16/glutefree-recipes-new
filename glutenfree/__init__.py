@@ -18,4 +18,8 @@ else:
 
 db = SQLAlchemy(app)
 
+# blueprint for auth routes in our app
+from .auth import auth as auth_blueprint
+app.register_blueprint(auth_blueprint)
+
 from glutenfree import routes  # noqa
