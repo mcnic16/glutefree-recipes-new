@@ -51,7 +51,7 @@ The main colour scheme of the website is blue and white, and recipes in green mo
 
   -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
-  The Base template failed on the following:
+  The base, add_starter,cuisine templates failed on the following:
   <h2 align="center"><img src="glutenfree/testhtmlscreenshots/basetest.png" width="400px"></h2>
   <h2 align="center"><img src="glutenfree/testhtmlscreenshots/cusinetest.png" width="400px"></h2>
   <h2 align="center"><img src="glutenfree/testhtmlscreenshots/addstarter.png" width="400px"></h2>
@@ -62,11 +62,14 @@ The main colour scheme of the website is blue and white, and recipes in green mo
   The CSS page failed: [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 <h2 align="center"><img src="glutenfree/testhtmlscreenshots/css.png" width="400px"></h2>
 
-
+ 
 The Python Code passed: [online-ide.com](https://www.online-ide.com/online_python_syntax_checker)
 
 
+I have tested all links, everything works. The things that is not working is registering, Logging in, Logging out because I ran out of time.
 
+Further Testing
+This game has been checked on various phones, tablets, a laptop and a desktop.
 
 
 
