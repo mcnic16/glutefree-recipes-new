@@ -8,7 +8,7 @@ main = Blueprint('main', __name__)
 
 @app.route("/")
 def home():
-    #home page
+    # home page
     return render_template("cuisine.html")
 
 
